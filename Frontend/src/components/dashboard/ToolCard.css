@@ -1,0 +1,127 @@
+.tool-card {
+  --tool-color: #7c3aed;
+  --tool-background: #f3e8ff;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 225px;
+  padding: 24px;
+  border: 1px solid #e9eaf0;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #171923;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.tool-card-purple {
+  --tool-color: #7c3aed;
+  --tool-background: #f3e8ff;
+}
+
+.tool-card-blue {
+  --tool-color: #2563eb;
+  --tool-background: #dbeafe;
+}
+
+.tool-card-green {
+  --tool-color: #059669;
+  --tool-background: #d1fae5;
+}
+
+.tool-card-orange {
+  --tool-color: #ea580c;
+  --tool-background: #ffedd5;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--tool-color);
+  box-shadow: 0 12px 30px rgba(20, 20, 40, 0.08);
+}
+
+.tool-card:focus-visible {
+  outline: 3px solid var(--tool-color);
+  outline-offset: 4px;
+}
+
+.tool-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.tool-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 15px;
+  color: var(--tool-color);
+  background: var(--tool-background);
+}
+
+.tool-card-badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  color: var(--tool-color);
+  background: var(--tool-background);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tool-card-content {
+  flex: 1;
+}
+
+.tool-card-content h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.tool-card-content p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.tool-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f4;
+  color: var(--tool-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tool-card-footer svg {
+  transition: transform 0.2s ease;
+}
+
+.tool-card:hover .tool-card-footer svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .tool-card {
+    min-height: 200px;
+    padding: 20px;
+  }
+
+  .tool-card-top {
+    margin-bottom: 18px;
+  }
+}
